@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GM Creatives — Graphic Design, Web & App Development Studio</title>
+<meta name="description" content="GM Creatives is a graphic design, website development, and app development studio led by Gabriel Mills, bringing over 5 years of creative industry experience to every project.">
+<link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>
+  (function() {
+    var saved = localStorage.getItem('gmc-theme');
+    var theme = saved || 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+  })();
+</script>
+</head>
+<body>
+
+<div class="bg-glow" aria-hidden="true"></div>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <img src="assets/images/logo.jpeg" alt="GM Creatives logo" class="brand-mark">
+      <span class="brand-name">GM Creatives</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary btn-sm mobile-cta">Start a Project</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"></path></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path></svg>
+      </button>
+      <a href="#contact" class="btn btn-primary btn-sm">Start a Project</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <p class="eyebrow reveal">Graphic Design · Web Development · App Development</p>
+      <h1 class="hero-title reveal">
+        We design brands.<br>
+        We build products.<br>
+        <span class="text-accent">We elevate ideas.</span>
+      </h1>
+      <p class="hero-sub reveal">
+        GM Creatives is a creative studio turning ambitious ideas into polished visual identities,
+        high-performing websites, and custom apps — led by a founder with 5+ years in the creative industry.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">Start a Project</a>
+        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS / STATS -->
+  <section class="pillars">
+    <div class="container pillars-grid">
+      <div class="pillar reveal">
+        <span class="pillar-num">5+</span>
+        <span class="pillar-label">Years in the creative industry</span>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-num">3</span>
+        <span class="pillar-label">Disciplines under one roof — design, web &amp; app</span>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-num">1:1</span>
+        <span class="pillar-label">Direct access to the founder, every project</span>
+      </div>
+      <div class="pillar reveal">
+        <span class="pillar-num">100%</span>
+        <span class="pillar-label">Custom-built — no templates, no shortcuts</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">What we do</p>
+        <h2>Services built to move your brand forward</h2>
+        <p class="section-sub">From first sketch to shipped product, we cover the full creative and technical range so you don't have to juggle five different freelancers.</p>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"></path><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path><path d="M2 2l7.586 7.586"></path><circle cx="11" cy="11" r="2"></circle></svg>
+          </div>
+          <h3>Graphic Design</h3>
+          <p>Logos, brand identity systems, social media creative, print &amp; packaging — visuals that make your brand instantly recognizable.</p>
+          <ul class="service-list">
+            <li>Logo &amp; brand identity</li>
+            <li>Social media &amp; marketing creative</li>
+            <li>Print &amp; packaging design</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          </div>
+          <h3>Website Development</h3>
+          <p>Fast, responsive, custom-coded websites and landing pages designed to convert visitors and represent your brand properly.</p>
+          <ul class="service-list">
+            <li>Custom responsive websites</li>
+            <li>Landing pages &amp; e-commerce</li>
+            <li>Performance &amp; SEO foundations</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"></rect><line x1="11" y1="18" x2="13" y2="18"></line></svg>
+          </div>
+          <h3>App Development</h3>
+          <p>Mobile and web applications built for real users — clean interfaces backed by reliable, maintainable code.</p>
+          <ul class="service-list">
+            <li>iOS &amp; Android apps</li>
+            <li>Web applications</li>
+            <li>Product UI/UX design</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"></path><path d="M18.7 8l-5.1 5.2-3-3L3 18"></path></svg>
+          </div>
+          <h3>Brand &amp; Digital Strategy</h3>
+          <p>Positioning, brand systems, and ongoing creative direction to keep every touchpoint consistent as you grow.</p>
+          <ul class="service-list">
+            <li>Brand positioning &amp; guidelines</li>
+            <li>Content &amp; creative direction</li>
+            <li>Ongoing design support</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process" id="process">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">How we work</p>
+        <h2>A clear process, from idea to launch</h2>
+        <p class="section-sub">No black boxes. You'll know exactly what's happening at every stage.</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">01</div>
+          <h3>Discover</h3>
+          <p>We dig into your goals, audience, and brand to understand what success actually looks like.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">02</div>
+          <h3>Design</h3>
+          <p>Concepts, wireframes, and visual direction — refined with your feedback until it's right.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">03</div>
+          <h3>Develop</h3>
+          <p>Clean, tested code turns the approved design into a working website, app, or brand asset.</p>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">04</div>
+          <h3>Deliver</h3>
+          <p>Launch day, plus support after — we stick around to make sure everything keeps running smoothly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT / FOUNDER -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-photo reveal">
+        <img src="assets/images/founder.png" alt="Gabriel Mills, Founder of GM Creatives">
+      </div>
+      <div class="about-content reveal">
+        <p class="eyebrow">Meet the founder</p>
+        <h2>Gabriel Mills</h2>
+        <p class="about-role">Founder &amp; Creative Director</p>
+        <p class="about-text">
+          For over 5 years, I've worked across graphic design, web development, and app development —
+          learning that the best digital experiences happen when great design and solid engineering come from
+          the same place.
+        </p>
+        <p class="about-text">
+          GM Creatives was built on that idea: one studio, one point of contact, and a founder who's personally
+          invested in getting every project right — not a call center of account managers between you and the work.
+        </p>
+        <p class="about-quote">"Good design gets noticed. Good code makes it last."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner reveal">
+      <h2>Got an idea? Let's build it.</h2>
+      <p>Whether it's a brand refresh, a new website, or an app from scratch — let's talk about what you need.</p>
+      <a href="#contact" class="btn btn-primary">Start a Project</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info reveal">
+        <p class="eyebrow">Get in touch</p>
+        <h2>Let's start the conversation</h2>
+        <p class="section-sub">Tell me a bit about your project and I'll get back to you personally.</p>
+        <a class="contact-email" href="mailto:info@gmcreatives.tech">info@gmcreatives.tech</a>
+        <div class="socials">
+          <a href="https://instagram.com/officialmills__" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="https://tiktok.com/@officialmills__" target="_blank" rel="noopener" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M16.6 3c.4 2.2 1.8 3.8 4.4 4v3c-1.6 0-3-.5-4.4-1.4v6.6c0 3.6-2.9 6.3-6.4 6.3S3.8 19 3.8 15.4c0-3.4 2.7-6.1 6-6.3v3.1c-1.6.2-2.8 1.5-2.8 3.2 0 1.8 1.5 3.2 3.2 3.2s3.3-1.4 3.3-3.2V3h3.1z"></path></svg>
+          </a>
+          <a href="https://x.com/officialmillz3" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-5.4-6.7L4.6 22H1.5l8.1-9.3L1 2h7l4.9 6.1L18.9 2zm-1.2 18h1.9L6.4 4h-2l13.3 16z"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/gmills69" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="3"></rect><line x1="7" y1="10" x2="7" y2="17"></line><circle cx="7" cy="6.8" r="0.6" fill="currentColor"></circle><path d="M11 17v-4.5c0-1.5 1-2.5 2.5-2.5s2.5 1 2.5 2.5V17"></path><line x1="11" y1="10" x2="11" y2="17"></line></svg>
+          </a>
+          <a href="https://www.facebook.com/kvng.millz.5" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8h2V5h-2c-2.2 0-4 1.8-4 4v2H9v3h2v7h3v-7h2.5l.5-3H14V9c0-.6.4-1 1-1z"></path></svg>
+          </a>
+          <a href="https://www.snapchat.com/add/gmillz00" target="_blank" rel="noopener" aria-label="Snapchat">
+            <svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 3c-3 0-5.4 2.4-5.4 6 0 1-.1 2 .3 2.8-.7.3-1.6.7-2.2 1.2-.5.4-.2 1.1.4 1.1-.3.5 0 1.1.6 1.1.5 0 .7.4.6.9-.1.6.3 1 .9 1 .4 0 .6.3.8.7.3.7 1.1 1.2 2.3 1.6 1 .3 1.8.8 2.7.8s1.7-.5 2.7-.8c1.2-.4 2-.9 2.3-1.6.2-.4.4-.7.8-.7.6 0 1-.4.9-1-.1-.5.1-.9.6-.9.6 0 .9-.6.6-1.1.6 0 .9-.7.4-1.1-.6-.5-1.5-.9-2.2-1.2.2-.8.3-1.8.3-2.8 0-3.6-2.4-6-5.4-6z"></path><circle cx="9.3" cy="10.5" r="0.7"></circle><circle cx="14.7" cy="10.5" r="0.7"></circle></svg>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" action="mailto:info@gmcreatives.tech" method="post" enctype="text/plain">
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+        <label>
+          Project details
+          <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#top" class="brand">
+        <img src="assets/images/logo.jpeg" alt="GM Creatives logo" class="brand-mark">
+        <span class="brand-name">GM Creatives</span>
+      </a>
+      <p>Graphic design, website development, and app development — under one roof.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Site</h4>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Connect</h4>
+      <a href="mailto:info@gmcreatives.tech">info@gmcreatives.tech</a>
+      <a href="https://instagram.com/officialmills__" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://tiktok.com/@officialmills__" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.linkedin.com/in/gmills69" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year"></span> GM Creatives. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
