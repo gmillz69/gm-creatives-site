@@ -10,23 +10,6 @@ if (preloader) {
   }, 2000);
 }
 
-// Hero tagline word rotator
-const heroRotator = document.getElementById('hero-rotator');
-
-if (heroRotator) {
-  const rotatorWords = ['Graphic Design', 'Web Development', 'App Development'];
-  let rotatorIndex = 0;
-
-  window.setInterval(() => {
-    heroRotator.classList.add('rotator-out');
-    window.setTimeout(() => {
-      rotatorIndex = (rotatorIndex + 1) % rotatorWords.length;
-      heroRotator.textContent = rotatorWords[rotatorIndex];
-      heroRotator.classList.remove('rotator-out');
-    }, 350);
-  }, 2200);
-}
-
 // Theme toggle (dark by default, persisted in localStorage)
 const root = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
