@@ -364,6 +364,10 @@ section { padding: 100px 0; }
   gap: 24px;
 }
 
+.services-grid .service-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .service-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
