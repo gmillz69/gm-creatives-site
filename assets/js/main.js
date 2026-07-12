@@ -21,21 +21,23 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('gmc-theme', next);
 });
 
-// Mobile nav toggle
+// Mobile nav toggle (full-screen overlay, separate from the desktop inline nav)
 const navToggle = document.getElementById('nav-toggle');
-const mainNav = document.getElementById('main-nav');
+const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
 
 navToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
+  const isOpen = mobileNavOverlay.classList.toggle('open');
   navToggle.classList.toggle('open', isOpen);
   navToggle.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('nav-open', isOpen);
 });
 
-mainNav.querySelectorAll('a').forEach((link) => {
+mobileNavOverlay.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
+    mobileNavOverlay.classList.remove('open');
     navToggle.classList.remove('open');
     navToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('nav-open');
   });
 });
 

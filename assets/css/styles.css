@@ -215,6 +215,8 @@ h1, h2, h3, h4 {
 .footer-brand .brand-mark { height: 56px; }
 
 .header-actions {
+  position: relative;
+  z-index: 95;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -268,7 +270,70 @@ h1, h2, h3, h4 {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.main-nav a.mobile-cta { display: none; }
+/* ===== Mobile full-screen nav overlay =====
+   Deliberately a sibling of <header>, not a descendant: .site-header
+   uses backdrop-filter, which makes it a containing block for any
+   position:fixed descendant, so a fixed overlay nested inside it
+   would be sized to the header's box instead of the viewport. */
+.mobile-nav-overlay { display: none; }
+
+.mobile-nav-overlay a.mobile-cta { display: none; }
+
+@media (max-width: 900px) {
+  .mobile-nav-overlay {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 90;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background: color-mix(in srgb, var(--bg) 80%, transparent);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-18px);
+    transition: opacity 0.4s var(--ease), transform 0.4s var(--ease), visibility 0.4s;
+    pointer-events: none;
+  }
+
+  .mobile-nav-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-nav-overlay a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.2s var(--ease);
+  }
+
+  .mobile-nav-overlay a:hover { color: var(--text); }
+  .mobile-nav-overlay a.active { color: var(--accent); }
+
+  .mobile-nav-overlay a:hover .nav-arrow,
+  .mobile-nav-overlay a.active .nav-arrow {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  .mobile-nav-overlay a.mobile-cta {
+    color: var(--accent-contrast);
+    margin-top: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-nav-overlay { transition: none; }
+}
 
 /* ===== Hero ===== */
 .hero { padding: 120px 0 80px; }
@@ -914,7 +979,7 @@ section { padding: 100px 0; }
 [data-theme="light"] .preloader-logo.logo-dark { display: none; }
 [data-theme="light"] .preloader-logo.logo-light { display: block; }
 
-body.preloading { overflow: hidden; }
+body.preloading, body.nav-open { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   .preloader-ring { animation: none; }
@@ -934,21 +999,8 @@ body.preloading { overflow: hidden; }
 
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
-  .main-nav { display: none; }
   .nav-toggle { display: flex; }
-
-  .main-nav.open {
-    display: flex;
-    position: absolute;
-    top: 76px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--bg);
-    border-bottom: 1px solid var(--border);
-    padding: 24px;
-    gap: 20px;
-  }
+  .main-nav { display: none; }
 
   .pillars-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: 1fr; }
@@ -974,7 +1026,7 @@ body.preloading { overflow: hidden; }
 
 @media (max-width: 600px) {
   .header-actions .btn-sm:not(.mobile-cta) { display: none; }
-  .main-nav a.mobile-cta { display: inline-flex; margin-top: 4px; }
+  .mobile-nav-overlay a.mobile-cta { display: inline-flex; }
 }
 
 @media (max-width: 560px) {
