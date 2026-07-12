@@ -27,16 +27,6 @@ mainNav.querySelectorAll('a').forEach((link) => {
   });
 });
 
-// Shrink header on scroll
-const siteHeader = document.querySelector('.site-header');
-
-const updateHeaderScroll = () => {
-  siteHeader.classList.toggle('scrolled', window.scrollY > 40);
-};
-
-updateHeaderScroll();
-window.addEventListener('scroll', updateHeaderScroll, { passive: true });
-
 // Reveal-on-scroll animation
 const revealEls = document.querySelectorAll('.reveal');
 
