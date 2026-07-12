@@ -135,6 +135,13 @@ h1, h2, h3, h4 {
   backdrop-filter: blur(14px);
   background: color-mix(in srgb, var(--bg) 75%, transparent);
   border-bottom: 1px solid var(--border);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.35s var(--ease), background 0.35s var(--ease);
+}
+
+.site-header.scrolled {
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  box-shadow: 0 12px 30px -18px rgba(0, 0, 0, 0.5);
 }
 
 .header-inner {
@@ -142,7 +149,11 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: space-between;
   height: 76px;
+  transition: height 0.3s var(--ease);
 }
+
+.site-header.scrolled .header-inner { height: 64px; }
+.site-header.scrolled .brand-mark { height: 40px; }
 
 .brand {
   display: flex;
@@ -154,6 +165,7 @@ h1, h2, h3, h4 {
   height: 48px;
   width: auto;
   object-fit: contain;
+  transition: height 0.3s var(--ease);
 }
 
 .brand-mark.logo-light { display: none; }
@@ -173,6 +185,9 @@ h1, h2, h3, h4 {
 }
 
 .main-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-size: 0.92rem;
   font-weight: 500;
   color: var(--text-muted);
@@ -182,6 +197,20 @@ h1, h2, h3, h4 {
 .main-nav a:hover { color: var(--text); }
 
 .main-nav a.active { color: var(--accent); }
+
+.nav-arrow {
+  width: 11px;
+  height: 11px;
+  opacity: 0;
+  transform: translate(-3px, 3px) rotate(-45deg);
+  transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
+}
+
+.main-nav a:hover .nav-arrow,
+.main-nav a.active .nav-arrow {
+  opacity: 1;
+  transform: translate(0, 0) rotate(0deg);
+}
 
 .footer-brand .brand-mark { height: 56px; }
 
@@ -239,7 +268,7 @@ h1, h2, h3, h4 {
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.mobile-cta { display: none; }
+.main-nav a.mobile-cta { display: none; }
 
 /* ===== Hero ===== */
 .hero { padding: 120px 0 80px; }
@@ -844,7 +873,7 @@ section { padding: 100px 0; }
 
 @media (max-width: 600px) {
   .header-actions .btn-sm:not(.mobile-cta) { display: none; }
-  .mobile-cta { display: inline-flex; margin-top: 4px; }
+  .main-nav a.mobile-cta { display: inline-flex; margin-top: 4px; }
 }
 
 @media (max-width: 560px) {
